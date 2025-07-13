@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const generateRoomCode = () => Math.random().toString(36).substring(2, 8).toUpperCase();
 const emailRegex = /^\S+@\S+\.\S+$/;
 
 const isMobile = () => window.innerWidth <= 700;
