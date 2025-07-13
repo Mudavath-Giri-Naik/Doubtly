@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html, body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #222;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(106,130,251,0.10);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+button:active {
+  transform: scale(0.98);
+}
+button:focus {
+  outline: 2px solid #6a82fb;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #f5f7fa;
+  transition: border 0.2s;
+}
+input:focus, textarea:focus {
+  border: 1.5px solid #6a82fb;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f5f7fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0eafc;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  #root {
+    padding: 0;
+  }
+  .chat-container, .form-container {
+    max-width: 400px !important;
+    min-width: 0 !important;
+    width: auto !important;
+    border-radius: 12px !important;
+    margin: 0.7rem auto !important;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.04) !important;
+    padding: 1.2rem 0.7rem !important;
+    background: #fff !important;
+    min-height: unset !important;
+    height: auto !important;
+    transition: none !important;
+  }
+  header {
+    padding: 0.5rem 0 !important;
+    min-height: 48px;
+    font-size: 1.1rem !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  h1, h2, h3 {
+    font-size: 1.1rem !important;
+    margin: 0.7rem 0 !important;
+  }
+  button {
+    font-size: 1.05rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  input, textarea {
+    font-size: 1.05rem;
+    padding: 0.8rem 0.7rem;
+    border-radius: 7px;
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 0.7rem;
+    box-sizing: border-box;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+  }
+  .chat-container form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0 -2px 12px rgba(44,62,80,0.04);
+    padding: 0.7rem 0.7rem !important;
+    z-index: 99;
+    margin: 0;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .chat-container {
+    padding-bottom: 4.5rem !important;
+  }
+  .chat-container > div[style*='overflow-y: auto'] {
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    max-height: calc(100vh - 180px) !important;
+    min-height: 200px !important;
+    padding-bottom: 0.5rem !important;
+  }
+}
